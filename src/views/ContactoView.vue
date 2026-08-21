@@ -244,7 +244,7 @@ function handleSubmitWhatsApp() {
 <style scoped>
 .page-hero {
   position: relative;
-  padding: calc(var(--header-height) + var(--space-10)) 0 var(--space-8);
+  padding: calc(var(--header-height) + var(--space-8)) 0 var(--space-6);
   background: var(--gradient-dark);
   color: #fff;
 }
@@ -257,8 +257,15 @@ function handleSubmitWhatsApp() {
 
 .page-hero h1 {
   color: #fff;
-  font-size: var(--text-3xl);
-  margin-bottom: var(--space-3);
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-2);
+}
+
+@media (min-width: 640px) {
+  .page-hero h1 {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-3);
+  }
 }
 
 @media (min-width: 768px) {
@@ -275,7 +282,7 @@ function handleSubmitWhatsApp() {
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-8);
+  gap: var(--space-6);
 }
 
 @media (min-width: 768px) {
@@ -287,11 +294,19 @@ function handleSubmitWhatsApp() {
 
 .contact-info h2,
 .wizard-header h2 {
+  font-size: var(--text-xl);
   margin-bottom: var(--space-2);
 }
 
+@media (min-width: 640px) {
+  .contact-info h2,
+  .wizard-header h2 {
+    font-size: var(--text-2xl);
+  }
+}
+
 .wizard-header {
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-5);
 }
 
 .wizard-header p {
@@ -300,18 +315,19 @@ function handleSubmitWhatsApp() {
 }
 
 .contact-info > p {
+  font-size: var(--text-sm);
   margin-bottom: var(--space-6);
 }
 
 .contact-items {
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: var(--space-4);
 }
 
 .contact-item {
   display: flex;
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
 .contact-item__icon {
@@ -319,8 +335,8 @@ function handleSubmitWhatsApp() {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   background: var(--color-primary-subtle);
   color: var(--color-primary);
   border-radius: var(--radius-lg);
@@ -335,7 +351,7 @@ function handleSubmitWhatsApp() {
 
 .contact-item strong {
   display: block;
-  margin-bottom: var(--space-1);
+  margin-bottom: 2px;
   font-size: var(--text-sm);
   color: var(--color-text);
 }
@@ -351,6 +367,8 @@ function handleSubmitWhatsApp() {
   background: #25d366;
   color: #fff;
   border-color: #25d366;
+  white-space: normal;
+  text-align: center;
 }
 
 .btn-whatsapp-direct:hover {
@@ -361,16 +379,33 @@ function handleSubmitWhatsApp() {
 
 .contact-form-wrapper {
   background: var(--color-bg-card);
-  padding: var(--space-6);
+  padding: var(--space-4);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--color-border-light);
+  width: 100%;
+  box-sizing: border-border;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 480px) {
+  .contact-form-wrapper {
+    padding: var(--space-6);
+  }
+}
+
+@media (min-width: 768px) {
   .contact-form-wrapper {
     padding: var(--space-8);
   }
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-2);
 }
 
 .step-num {
@@ -384,17 +419,25 @@ function handleSubmitWhatsApp() {
   border-radius: var(--radius-full);
   font-size: var(--text-xs);
   font-weight: var(--font-bold);
-  margin-right: var(--space-2);
+  flex-shrink: 0;
 }
 
+/* Tarjetas de sector Mobile-First */
 .sector-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-3);
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
   margin-top: var(--space-2);
 }
 
 @media (min-width: 480px) {
+  .sector-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+}
+
+@media (min-width: 768px) {
   .sector-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -402,16 +445,27 @@ function handleSubmitWhatsApp() {
 
 .sector-card {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: var(--space-3) var(--space-2);
+  justify-content: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
   background: var(--color-bg-alt);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
   cursor: pointer;
   transition: all var(--transition-fast);
-  text-align: center;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 480px) {
+  .sector-card {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-3) var(--space-2);
+  }
 }
 
 .sector-card:hover {
@@ -426,32 +480,62 @@ function handleSubmitWhatsApp() {
 }
 
 .sector-card__icon {
-  font-size: 1.5rem;
-  margin-bottom: var(--space-1);
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+@media (min-width: 480px) {
+  .sector-card__icon {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-1);
+  }
 }
 
 .sector-card__label {
   font-size: var(--text-xs);
   font-weight: var(--font-semibold);
   color: var(--color-text);
+  line-height: 1.2;
 }
 
 .form-select {
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%202d3436' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right var(--space-4) center;
-  padding-right: var(--space-10);
+  background-position: right var(--space-3) center;
+  padding-right: var(--space-8);
   cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+}
+
+.form-input,
+.form-textarea {
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .btn-whatsapp-submit {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
   background: #25d366;
   color: #fff;
-  border-color: #25d366;
+  border: 1px solid #25d366;
+  border-radius: var(--radius-md);
   margin-top: var(--space-4);
+  font-size: var(--text-sm);
   font-weight: var(--font-bold);
+  white-space: normal;
+  text-align: center;
+  line-height: 1.3;
+  cursor: pointer;
 }
 
 .btn-whatsapp-submit:hover {
