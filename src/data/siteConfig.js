@@ -14,8 +14,8 @@ const siteConfig = {
     celular: '(667) 263 59 18',
     celularLink: 'tel:+5216672635918',
     email: 'info@solucionarecubrimientos.com',
-    whatsapp: 'https://wa.me/5216673510055?text=SRCOM%20Me%20interesa%20una%20cotizaci%C3%B3n',
-    whatsappNumero: '667 351 0055',
+    whatsapp: 'https://wa.me/5216672635918?text=Hola%2C%20me%20interesa%20recibir%20una%20cotizaci%C3%B3n',
+    whatsappNumero: '667 263 59 18',
   },
 
   direccion: {
