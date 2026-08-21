@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <g transform="translate(40, 20)">
+    <rect x="0" y="0" width="80" height="80" fill="#E30613"/>
+    <polygon points="15,65 40,15 65,65" fill="#FFED00"/>
+    <text x="100" y="62" font-family="'Arial Black', Arial, sans-serif" font-size="52" font-weight="900" fill="#ffffff" letter-spacing="2">ARDEX</text>
+  </g>
+</svg>
