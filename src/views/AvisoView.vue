@@ -52,7 +52,7 @@
             <h2>Contacto</h2>
             <p>Para cualquier duda o aclaración sobre este aviso de privacidad, contáctenos en:</p>
             <ul>
-              <li>Correo: <a :href="`mailto:${siteConfig.contacto.email}`">{{ siteConfig.contacto.email }}</a></li>
+              <li>WhatsApp: <a :href="siteConfig.contacto.celularLink" target="_blank" rel="noopener">{{ siteConfig.contacto.celular }}</a></li>
               <li>Teléfono: <a :href="siteConfig.contacto.telefonoLink">{{ siteConfig.contacto.telefono }}</a></li>
               <li>Dirección: {{ siteConfig.direccion.completa }}</li>
             </ul>

@@ -85,11 +85,6 @@
               </svg>
               Enviar a WhatsApp
             </button>
-
-            <!-- Chat directo alternativo -->
-            <a :href="directWhatsAppUrl" target="_blank" rel="noopener" class="direct-link">
-              O iniciar chat sin datos previas
-            </a>
           </form>
         </div>
       </div>

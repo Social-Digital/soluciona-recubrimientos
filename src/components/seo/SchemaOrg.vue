@@ -18,9 +18,7 @@ useHead({
         '@id': siteConfig.url,
         name: siteConfig.nombre,
         description: siteConfig.descripcion,
-        url: siteConfig.url,
-        telephone: '+526672867663',
-        email: siteConfig.contacto.email,
+        telephone: '+5216672635918',
         image: `${siteConfig.url}/images/og-default.jpg`,
         address: {
           '@type': 'PostalAddress',
